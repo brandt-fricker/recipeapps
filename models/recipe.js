@@ -4,14 +4,24 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          len: [1]
+          len: [10]
         }
       },
-      body: {
+      ingredients: {
         type: DataTypes.TEXT,
         allowNull: false,
-        len: [1]
+        len: [30]
+      },
+      description: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+      },
+      mealType : {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        len: [5]
       }
+
     });
   
     recipe.associate = function(models) {
