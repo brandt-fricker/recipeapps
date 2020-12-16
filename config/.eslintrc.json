@@ -1,0 +1,27 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "rules": {
+        "yoda": "error",
+        "eqeqeq": "error",
+        "no-empty": "error",
+        "use-isnan": "error",
+        "no-dupe-args": "error",
+        "no-dupe-keys": "error",
+        "no-ex-assign": "error",
+        "no-cond-assign": "error",
+        "no-func-assign":"error",
+        "no-unused-vars":"error",
+        "no-dupe-else-if": "error",
+        "no-duplicate-case": "error",
+        "no-unsafe-negation": "error",
+        "no-irregular-whitespace": "error"
+    }
+}
