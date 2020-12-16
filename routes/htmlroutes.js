@@ -26,4 +26,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../views/index.handlebars"));
   });
 
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> a496f39ec8e3b0d6424ae7b8433698b884f5e76c
