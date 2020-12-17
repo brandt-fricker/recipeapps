@@ -11,9 +11,9 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    // res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+    //  res.sendFile(path.join(__dirname, "../public/author-manager.html"));
     console.log("Hi there");
-    res.send("Hi there!");
+    res.render("index");
   });
 
   // add route loads the add.html page,
