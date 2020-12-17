@@ -11,7 +11,9 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+    // res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+    console.log("Hi there");
+    res.send("Hi there!");
   });
 
   // add route loads the add.html page,
@@ -26,8 +28,4 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../views/index.handlebars"));
   });
 
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> a496f39ec8e3b0d6424ae7b8433698b884f5e76c
