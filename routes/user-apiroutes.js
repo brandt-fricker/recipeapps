@@ -1,11 +1,11 @@
 const { User, Recipe } = require("../models");
+var passport = require('passport');
 
 module.exports = function (app) {
   app.get("/api/users", async function (req, res) {
     const allUsers = await User.findAll({});
-      res.json(allUsers);
-      console.log(allUsers);
-    
+    res.json(allUsers);
+    console.log(allUsers);
   });
 
   app.get("/api/users/:id", async function (req, res) {
@@ -24,12 +24,19 @@ module.exports = function (app) {
     }
   });
 
-  app.post("/api/users", async function(req, res) {
+  app.post("/api/users", async function (req, res) {
     const newUser = await User.create(req.body);
-      res.json(newUser);
-      console.log(newUser.toJSON());
-  
+    res.json(newUser);
+    console.log(newUser.toJSON());
   });
+
+  app.post("/login",
+    passport.authenticate("local", {
+      successRedirect: "/",
+      failureRedirect: "/login",
+      failureFlash: true,
+    })
+  );
 
   // app.delete("/api/authors/:id", function(req, res) {
   //   db.Author.destroy({
