@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+// const path = require("../views/index.handlebars");
+
+=======
+>>>>>>> 8713d34e54a00ceaa4c0bd15ce7034b230150041
 $(document).ready(function() {
   // Getting references to our form and inputs
   var loginForm = $("form.login");
@@ -30,6 +35,12 @@ $(document).ready(function() {
     })
       .then(function() {
         window.location.replace("/members");
+<<<<<<< HEAD
+        // res.render("index");
+        // location.reload()
+        
+=======
+>>>>>>> 8713d34e54a00ceaa4c0bd15ce7034b230150041
         // If there's an error, log the error
       })
       .catch(function(err) {

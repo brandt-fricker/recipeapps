@@ -1,4 +1,16 @@
+<<<<<<< HEAD
+body {
+  background-image: url(../images/backimg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+=======
 form.signup,
 form.login {
   margin-top: 50px;
 }
+>>>>>>> 8713d34e54a00ceaa4c0bd15ce7034b230150041
