@@ -1,13 +1,4 @@
-{{!-- <style> div{
-   
-    color: black;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}</style> --}}
-<div class="container mainCont">
-  <div class="row"> 
+
 <ul>
   {{#each cats}}
     {{#unless sleepy}}
@@ -16,22 +7,6 @@
   {{/each}}
 </ul>
 
-<h1 class="bg-primary text-white">Welcome to Recipe App</h1>
-
-<form action="/login" method="post">
-    <div>
-        <label>Username:</label>
-        <input type="text" name="username"/>
-    </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" name="password"/>
-    </div>
-    <div>
-        <input type="submit" value="Log In"/>
-        <input type="submit" value="Register">
-    </div>
-</form>
 
 <ul>
   {{#each cats}}
@@ -40,7 +15,25 @@
     {{/if}}
   {{/each}}
 </ul>
-
-
-</div>
-</div>
+  {{!-- <nav class="navbar navbar-default bg-light">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand " href="/logout">
+        Logout
+      </a>
+    </div>
+  </div>
+</nav> --}}
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/logout">Logout</a>
+  </div>
+</nav>
+<br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Welcome To The App <span class="member-name"></span></h2>
+      </div>
+    </div>
+  </div>
