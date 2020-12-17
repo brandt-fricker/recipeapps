@@ -19,11 +19,11 @@ As a user this app is for viewing, saving, and creating recipes.
 ## Division of Labor:
 1. Create Skeleton
 2. Rough outline
-3. Front End: 
+3. Front End: (Brandt and Kendra)
    * create html
    * style html with css
    * js button functionallity
-4. Back End:
+4. Back End: (Ricky and Sergey)
    * create sql server
    * create connection
    * routes
