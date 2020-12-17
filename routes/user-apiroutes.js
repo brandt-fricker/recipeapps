@@ -1,26 +1,43 @@
-var db = require("../models");
+const { User, Recipe } = require("../models");
 
-// Routes
-// =============================================================
-module.exports = function(app) {
-
-  // GET route for getting all of the todos
-  app.get("/api/recipe", function(req, res) {
-
+module.exports = function (app) {
+  app.get("/api/users", async function (req, res) {
+    const allUsers = await User.findAll({});
+      res.json(allUsers);
+      console.log(allUsers);
+    
   });
 
-  // POST route for saving a new todo. You can create a todo using the data on req.body
-  app.post("/api/recipe", function(req, res) {
-
+  app.get("/api/users/:id", async function (req, res) {
+    // 2; Add a join to include all of the Author's Posts here
+    try {
+      const singleUser = await User.findOne({
+        where: {
+          id: req.params.id,
+        },
+        include: [db.Recipe],
+      });
+      res.json(singleUser);
+      console.log(singleUser);
+    } catch (error) {
+      res.status(500).end();
+    }
   });
 
-  // DELETE route for deleting todos. You can access the todo's id in req.params.id
-  app.delete("/api/recipe/:id", function(req, res) {
-
+  app.post("/api/users", async function(req, res) {
+    const newUser = await User.create(req.body);
+      res.json(newUser);
+      console.log(newUser.toJSON());
+  
   });
 
-  // PUT route for updating todos. The updated todo will be available in req.body
-  app.put("/api/recipe", function(req, res) {
-
-  });
+  // app.delete("/api/authors/:id", function(req, res) {
+  //   db.Author.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function(dbAuthor) {
+  //     res.json(dbAuthor);
+  //   });
+  // });
 };
