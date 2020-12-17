@@ -10,7 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
+    "bcryptjs": "^2.4.3",
+    "express": "^4.16.3",
+=======
     "express": "^4.17.1",
+>>>>>>> d46c4745e82e87777037e483aa714fa842ab498a
     "express-handlebars": "^3.0.0",
     "mysql2": "^1.6.4",
     "passport": "^0.4.1",
