@@ -9,44 +9,28 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-<<<<<<< HEAD
       // res.redirect("/members");
       res.render("index");
     }
     // res.sendFile(path.join(__dirname, "../public/signup.html"));
     res.render("signup");
-=======
-      res.redirect("/members");
-    }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
->>>>>>> 8713d34e54a00ceaa4c0bd15ce7034b230150041
   });
 
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-<<<<<<< HEAD
       // res.redirect("/members");
       res.render("index");
     }
     // res.sendFile(path.join(__dirname, "../public/login.html"));
     res.render("login");
-=======
-      res.redirect("/members");
-    }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
->>>>>>> 8713d34e54a00ceaa4c0bd15ce7034b230150041
   });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
-<<<<<<< HEAD
     // res.sendFile(path.join(__dirname, "../public/members.html"));
     res.render("index");
-=======
-    res.sendFile(path.join(__dirname, "../public/members.html"));
->>>>>>> 8713d34e54a00ceaa4c0bd15ce7034b230150041
   });
 
 };
