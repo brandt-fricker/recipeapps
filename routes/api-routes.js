@@ -1,5 +1,5 @@
 // Requiring our models and passport as we've configured it
-var db = require("../models");
+var { User, Recipe } = require("../models");
 var passport = require("../config/passport");
 
 
@@ -16,7 +16,7 @@ module.exports = function(app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
-    db.User.create({
+    User.create({
       email: req.body.email,
       password: req.body.password
     })
