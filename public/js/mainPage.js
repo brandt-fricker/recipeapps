@@ -6,6 +6,7 @@ $(document).ready(function () {
     const addYourBtn = $(".addYour");
     const updateYourBtn = $(".updateYour");
     const deleteYourBtn = $(".deleteYour");
+    const saveRecipe = $(".saveBtn");
 
 
     getRandomBtn.on("click", function(e) {
@@ -32,6 +33,9 @@ $(document).ready(function () {
         }).then(function(data){
             console.log(data)
             for (let i = 0; i < data.length; i++) {
+              let saveBtn = $("<button>")
+              .attr("class", "saveBtn btn-primary text-white")
+              .text("Save Recipe");
               let title = $("<p>")
               .attr("class", "foodDataTitle")
               .attr("id", "foodTitle")
@@ -57,10 +61,17 @@ $(document).ready(function () {
                 $(".recipe-container").append(
                     $("<div>")
                     .attr("class", "recipeDiv")
-                    .append(title, ingredients, description, mealType)
+                    .append(title, ingredients, description, mealType, saveBtn)
                 );
             }
         })
     })
 
+
+    saveRecipe.on("click", function(e) {
+        e.preventDefault();
+
+
+    })
+    
 });
