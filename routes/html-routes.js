@@ -1,5 +1,6 @@
 // Requiring path to so we can use relative routes to our HTML files
 var path = require("path");
+const axios = require("axios");
 
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -33,8 +34,20 @@ module.exports = function(app) {
     res.render("index");
   });
 
-  app.get("/add-recipes", function (req, res) {
-    res.render("addRecipe");
-  })
+  app.get("/get-random", async function (req, res) {
+    let queryUrl =
+      "https://api.spoonacular.com/recipes/random?number=1&apiKey=ba3cef0a320c41c5bbd79cbab4cf8d92";
+    
+      let hbsObject = {
+        title: "",
+      };
+
+    await axios.get(queryUrl).then(function (response) {
+     hbsObject.title = response.data.recipes[0].title;
+     console.log(hbsObject.title);
+    });
+    console.log(hbsObject, "hello");
+    res.render("recipe", hbsObject);
+  });
 
 };

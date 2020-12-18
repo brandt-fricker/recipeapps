@@ -1,6 +1,6 @@
 // Dependencies
 // =============================================================
-
+// const axios = require("axios");
 // Requiring our models
 var { User, Recipe } = require("../models");
 
@@ -8,6 +8,8 @@ var { User, Recipe } = require("../models");
 // =============================================================
 module.exports = function (app) {
   // GET route for getting all of the posts
+ 
+
   app.get("/api/recipes", async function (req, res) {
     const query = {};
     if (req.query.user_id) {
@@ -49,8 +51,7 @@ module.exports = function (app) {
         id: req.params.id,
       },
     });
-      res.json(deleteRecipe);
-    
+    res.json(deleteRecipe);
   });
 
   // PUT route for updating posts
@@ -60,7 +61,6 @@ module.exports = function (app) {
         id: req.params.id,
       },
     });
-      res.json(updateRecipe);
-    
+    res.json(updateRecipe);
   });
 };

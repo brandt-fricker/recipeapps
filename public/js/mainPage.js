@@ -12,16 +12,14 @@ $(document).ready(function () {
     getRandomBtn.on("click", function(e) {
         e.preventDefault();
 
-        console.log("HI!");
-
-        let queryUrl = "https://api.spoonacular.com/recipes/random?number=10&tags=vegetarian,dessert"
-
-        $.ajax({
-            url: queryUrl,
+        $.ajax("/api/get-random", {
             method: "GET",
-        }).then(function (response) {
-            console.log(response);
-            console.log("done")
+        }).then(function (data) {
+
+            console.log(data)
+          
+
+
         });
     });
 
