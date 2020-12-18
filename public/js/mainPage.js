@@ -16,7 +16,7 @@ $(document).ready(function () {
             method: "GET",
         }).then(function (data) {
 
-            console.log(data)
+            console.log(data, "hello")
           
 
 

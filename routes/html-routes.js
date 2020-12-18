@@ -39,12 +39,22 @@ module.exports = function(app) {
       "https://api.spoonacular.com/recipes/random?number=1&apiKey=ba3cef0a320c41c5bbd79cbab4cf8d92";
     
       let hbsObject = {
+      
         title: "",
+        instructions: '',
+        image: '',
+     
+        
       };
 
     await axios.get(queryUrl).then(function (response) {
-     hbsObject.title = response.data.recipes[0].title;
-     console.log(hbsObject.title);
+
+        hbsObject.title += response.data.recipes[0].title;
+        hbsObject.instructions += response.data.recipes[0].instructions + " , ";
+        hbsObject.image += response.data.recipes[0].image;
+
+    console.log(response)
+
     });
     console.log(hbsObject, "hello");
     res.render("recipe", hbsObject);
