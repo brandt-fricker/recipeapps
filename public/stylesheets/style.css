@@ -18,6 +18,7 @@ body {
 
 p{
   font-size: 1.8rem;
+  margin-left: 5px;
 }
 
 .recipe-container{
@@ -26,7 +27,7 @@ p{
   justify-content: center;
   border-radius: 5px;
   overflow: auto;
-  width: 100%;
+  width: 70%;
   height: 40rem;
 }
 
@@ -36,6 +37,20 @@ p{
   border-radius: 8px;
   margin-bottom: 10px;
   opacity: 0.7;
+  padding-left: 5px;
+}
+
+marquee {
+  behavior: scroll;
+  direction: left;
+  font-size: 1.4rem;
+  color: green;
+  margin-top: 8px;
+  font-style: bold;
+}
+button {
+  border-radius: 4px;
+  margin-left: 5px;
 }
 
 

@@ -33,4 +33,8 @@ module.exports = function(app) {
     res.render("index");
   });
 
+  app.get("/add-recipes", function (req, res) {
+    res.render("addRecipe");
+  })
+
 };
