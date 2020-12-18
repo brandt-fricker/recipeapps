@@ -18,8 +18,8 @@ module.exports = function (app) {
       where: query,
       include: [User],
     });
+    // console.log(allRecipes.toJSON());
     res.json(allRecipes);
-    // console.table(allRecipes);
   });
 
   // Get route for retrieving a single post
