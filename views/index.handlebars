@@ -15,6 +15,12 @@
     {{/if}}
   {{/each}}
 </ul>
+<div class="container">
+{{!-- <nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Navbar</span>
+  </div>
+</nav> --}}
   {{!-- <nav class="navbar navbar-default bg-light">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -26,14 +32,24 @@
 </nav> --}}
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/logout">Logout</a>
+    <a class="btn btn-primary" href="/logout" role="button">Logout</a>
+    <h2>Welcome To The App <span class="member-name"></span></h2>
   </div>
 </nav>
-<br>
-  <div class="container">
-    <div class="row">
+<div class="row">
+  <div class="col-sm-12 mt-3 d-inline-block">
+<button type="button" class="btn btn-primary">Get New Recipes</button>
+<button type="button" class="btn btn-secondary">Get your Recipes</button>
+<button type="button" class="btn btn-success">Add Your Recipe</button>
+<button type="button" class="btn btn-danger">Delete Your Recipe</button>
+</div>
+</div>
+
+  {{!-- <div class="container"> --}}
+    {{!-- <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h2>Welcome To The App <span class="member-name"></span></h2>
       </div>
-    </div>
+    </div> --}}
+  {{!-- </div> --}}
   </div>
