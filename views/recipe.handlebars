@@ -7,8 +7,8 @@
 </nav>
 <div class="row">
 <div class="col-sm-12 mt-3 d-inline-block">
-  <a href="/get-random" class="btn btn-primary mt-2" >Get Random Recipes</a>
-  <button type="button" class="getAll btn btn-secondary mt-2">Get Your Recipes</button>
+  <a href="/get-random" class="btn btn-primary mt-2" >Get Random Recipe</a>
+  <button type="button" class="getAll btn btn-secondary mt-2">Get Your Recipe</button>
   <button type="button" class="getSpecific btn btn-success mt-2">Get Specific Recipe</button>
   <button type="button" class="addYour btn btn-danger mt-2">Add Your Recipe</button>
   <button type="button" class="updateYour btn btn-success mt-2">Update Your Recipe</button>
@@ -17,11 +17,12 @@
 </div>
 <marquee >Welcome To The App <span class="member-name"></span></span></marquee>
 <div class="recipe-container">
- <h1>ohfgxkljnfgcvkbn grfdklvc </h1> 
+<br>
+  <h1>{{this.title}}</h1>
+<br>
+ <img src="{{this.image}}" alt="">
+<br>
+  <p>{{{this.instructions}}}</p>
 
-  {{title}}
-  
-
-  
 </div>
 </div>
