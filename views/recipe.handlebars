@@ -1,28 +1,39 @@
+<main class="recipe">
 <div class="container-fluid">
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a class="btn btn-primary" href="/logout" role="button">Logout</a>
-    <h6>Logged in as a <span class="member-name"></span></h6>
+    <a class="btn btn-primary" href="/main" role="button">Main Page</a>
+    <h5 class="text-danger">Logged in as a <span class="member-name"></span></h5>
   </div>
 </nav>
+<style>
+  body {
+  background-image: url(../images/recipePage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: aqua;
+}
+</style>
 <div class="row">
 <div class="col-sm-12 mt-3 d-inline-block">
   <a href="/get-random" class="btn btn-primary mt-2" >Get Random Recipe</a>
-  <button type="button" class="getAll btn btn-secondary mt-2">Get Your Recipe</button>
-  <button type="button" class="getSpecific btn btn-success mt-2">Get Specific Recipe</button>
-  <button type="button" class="addYour btn btn-danger mt-2">Add Your Recipe</button>
-  <button type="button" class="updateYour btn btn-success mt-2">Update Your Recipe</button>
-  <button type="button" class="deleteYour btn btn-danger mt-2">Delete Your Recipe</button>
 </div>
 </div>
-<marquee >Welcome To The App <span class="member-name"></span></span></marquee>
-<div class="recipe-container">
+<marquee class="text-primary">Welcome To The App <span class="member-name"></span></span></marquee>
+<div class="recipe-container text-white">
 <br>
   <h1>{{this.title}}</h1>
 <br>
  <img src="{{this.image}}" alt="">
 <br>
   <p>{{{this.instructions}}}</p>
+<br>
+<button class="saveBtn bg-primary text-white" data-id="{{id}}">
+		Save Recipe
+	</button>
 
 </div>
 </div>
+</main>
