@@ -65,4 +65,11 @@ module.exports = function(app) {
     res.render("index");
   });
 
+  app.get("/addRecipe", isAuthenticated, function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("addRecipe");
+  });
+
+
+
 };

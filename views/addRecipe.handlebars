@@ -1,21 +1,32 @@
-<div class="container">
-    <div class="row top-30">
-      <div class="col-md-2 col-sm-2">
-        <a class="btn btn-light" href="/index">Go To Main Page</a>
-      </div>
-      <div class="col-md-2 col-sm-2">
-        <a class="btn btn-light" href="/authors">Manage Authors</a>
-      </div>
-    </div>
+<main>
+   <div class="container-fluid">
+<nav class="navbar navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="btn btn-primary" href="/logout" role="button">Logout</a>
+    <a class="btn btn-primary" href="/main" role="button">Main Page</a>
+    <h6>Logged in as a <span class="member-name"></span></h6>
+  </div>
+</nav>
+<style>
+  body {
+  background-image: url(../images/addRecipePage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: aqua;
+}
+</style>
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <form id="cms">
           <div class="form-group">
             <label for="title">Title:</label>
-            <input placeholder="Post Title" type="text" class="form-control" id="title">
+            <input placeholder="Recipe Title" type="text" class="form-control" id="title">
             <br />
-            <label for="body">Body:</label>
-            <textarea placeholder="Post Body" class="form-control" rows="10" id="body"></textarea>
+            <label for="ingred">Ingredients:</label>
+            <textarea placeholder="Ingredients" class="form-control" rows="10" id="ingred"></textarea>
+            <label for="descript">Description:</label>
+            <textarea placeholder="Description" class="form-control" rows="10" id="descript"></textarea>
             <div class="form-group">
               <label for="category">Select Author:</label>
               <select class="custom-select" id="author">
@@ -27,4 +38,5 @@
         </form>
       </div>
     </div>
-  </div>
+    </div>
+  </main>
