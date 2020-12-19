@@ -1,3 +1,4 @@
+<main class="index">
 <div class="container-fluid">
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
@@ -5,14 +6,20 @@
     <h6>Logged in as a <span class="member-name"></span></h6>
   </div>
 </nav>
+<style>
+  body {
+  background-image: url(../images/backimg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: aqua;
+}
+</style>
 <div class="row">
 <div class="col-sm-12 mt-3 d-inline-block">
   <a href="/get-random" class="btn btn-primary mt-2" >Get Random Recipe</a>
   <button type="button" class="getAll btn btn-secondary mt-2">Get Your Recipes</button>
-  <button type="button" class="getSpecific btn btn-success mt-2">Get Specific Recipe</button>
   <button type="button" class="addYour btn btn-danger mt-2">Add Your Recipe</button>
-  <button type="button" class="updateYour btn btn-success mt-2">Update Your Recipe</button>
-  <button type="button" class="deleteYour btn btn-danger mt-2">Delete Your Recipe</button>
 </div>
 </div>
 <marquee >Welcome To The App <span class="member-name"></span></span></marquee>
@@ -24,3 +31,4 @@
   
 </div>
 </div>
+</main>

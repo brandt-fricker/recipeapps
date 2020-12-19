@@ -60,4 +60,9 @@ module.exports = function(app) {
     res.render("recipe", hbsObject);
   });
 
+  app.get("/main", isAuthenticated, function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("index");
+  });
+
 };
