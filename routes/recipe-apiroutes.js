@@ -3,7 +3,7 @@
 // const axios = require("axios");
 // Requiring our models
 var { User, Recipe } = require("../models");
-
+var app = require("./api-routes")
 
 // Routes
 // =============================================================
@@ -42,24 +42,10 @@ module.exports = function (app) {
   // POST route for saving a new post
   app.post("/api/add-recipes", async function (req, res) {
 
-    // app.get("/api/user_data", function(req, res) {
-    //   if (!req.user) {
-    //     // The user is not logged in, send back an empty object
-    //     res.json({});
-    //   } else {
-    //     // Otherwise send back the user's email and id
-    //     // Sending back a password, even a hashed password, isn't a good idea
-    //     console.log(res.json({
-    //       id: req.user.id
-    //     }))
-
-    //   }
-    
-    // });
-   console.log(req.body.user)
+    console.log(req.body)
     const newRecipe = await Recipe.create({
       ...req.body,
-      UserId: 1
+      
     });
     res.json(newRecipe);
     console.log(newRecipe.toJSON());

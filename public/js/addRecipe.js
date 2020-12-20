@@ -5,23 +5,30 @@ $(document).ready(function(){
   const ingrInput = $("#ingredients");
   const descrInput = $("#description");
   const mealInput = $("#mealType");
+  var userId = "";
   
-
   submitBtn.on("click", function(e) {
     e.preventDefault();
+    
+    
+    $.get("/api/user_data").then(function(data) {
+      userId = data.id
+      console.log(userId)
+    });
+    
 
-    const { title, ingredients, description, mealType} = {
+    const { title, ingredients, description, mealType, UserId} = {
       title: titleInput.val().trim(),
       ingredients: ingrInput.val().trim(),
       description: descrInput.val().trim(),
       mealType: mealInput.val().trim(),
+      UserId: userId
     };
-    console.log(title, ingredients, description, mealType);
 
-    if (!title || !ingredients || !description || !mealType){
+    if (!title || !ingredients || !description || !mealType || !UserId){
       return;
     }
-    pushData(title, ingredients, description, mealType);
+    pushData(title, ingredients, description, mealType, UserId);
 
 
     titleInput.val("");
@@ -31,15 +38,16 @@ $(document).ready(function(){
    
 
 
-    function pushData(title, ingredients, description, mealType){
+    function pushData(title, ingredients, description, mealType, UserId){
       $.post("/api/add-recipes", {
         title: title,
         ingredients: ingredients,
         description: description,
         mealType: mealType,
+        UserId: userId,
       })
       .then(function(data){
-        console.log(data);
+        console.log(data, "Success!");
       })
 
     }
