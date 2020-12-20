@@ -3,6 +3,7 @@
 // const axios = require("axios");
 // Requiring our models
 var { User, Recipe } = require("../models");
+var app = require("./api-routes")
 
 // Routes
 // =============================================================
@@ -40,7 +41,12 @@ module.exports = function (app) {
 
   // POST route for saving a new post
   app.post("/api/add-recipes", async function (req, res) {
-    const newRecipe = await Recipe.create(req.body);
+
+    console.log(req.body)
+    const newRecipe = await Recipe.create({
+      ...req.body,
+      
+    });
     res.json(newRecipe);
     console.log(newRecipe.toJSON());
   });
