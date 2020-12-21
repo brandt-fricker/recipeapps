@@ -18,7 +18,13 @@ Most of us have at one point and time had a recipe for something that was scribb
   - [GitHub Repository](#github-repository)
 
 ## Technological Outline
-
+* CSS
+* Express
+* Handlebars
+* JavaScript
+* Mysql
+* Sequleize
+  
 ## Division of Labor
 
 ## Deployment
@@ -28,4 +34,10 @@ Most of us have at one point and time had a recipe for something that was scribb
 ## Conclusion
 
 ## GitHub Repository
+- [Project Repository](https://github.com/rjustin16/recipeapps)
 
+## Meet the Creators
+- [Sergey](https://github.com/slugovoy)
+- [Ricky](https://github.com/rjustin16)
+- [Brandt](https://github.com/brandt-fricker)
+- [Kendra](https://github.com/klharmany)
