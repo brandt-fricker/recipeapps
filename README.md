@@ -16,6 +16,7 @@ Most of us have at one point and time had a recipe for something that was scribb
   - [Future Development](#future-development)
   - [Conclusion](#conclusion)
   - [GitHub Repository](#github-repository)
+  - [Meet the Creators](#meet-the-creators)
 
 ## Technological Outline
 * CSS
