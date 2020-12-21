@@ -33,6 +33,7 @@ Most of us have at one point and time had a recipe for something that was scribb
 ## Future Development
 
 ## Conclusion
+The Recipe App will save you time searching for recipes, and allow you to share and save recipes with ease. Family favorite recipes should be able to withstand the elements, enter them into the Recipe App and make sure they do.
 
 ## GitHub Repository
 - [Project Repository](https://github.com/rjustin16/recipeapps)
