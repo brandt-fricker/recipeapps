@@ -16,9 +16,16 @@ Most of us have at one point and time had a recipe for something that was scribb
   - [Future Development](#future-development)
   - [Conclusion](#conclusion)
   - [GitHub Repository](#github-repository)
+  - [Meet the Creators](#meet-the-creators)
 
 ## Technological Outline
-
+* CSS
+* Express
+* Handlebars
+* JavaScript
+* Mysql
+* Sequleize
+  
 ## Division of Labor
 
 ## Deployment
@@ -26,6 +33,13 @@ Most of us have at one point and time had a recipe for something that was scribb
 ## Future Development
 
 ## Conclusion
+The Recipe App will save you time searching for recipes, and allow you to share and save recipes with ease. Family favorite recipes should be able to withstand the elements, enter them into the Recipe App and make sure they do.
 
 ## GitHub Repository
+- [Project Repository](https://github.com/rjustin16/recipeapps)
 
+## Meet the Creators
+- [Sergey](https://github.com/slugovoy)
+- [Ricky](https://github.com/rjustin16)
+- [Brandt](https://github.com/brandt-fricker)
+- [Kendra](https://github.com/klharmany)
