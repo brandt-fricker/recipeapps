@@ -29,7 +29,7 @@
       <br>
       <p id="ingredients" value='{{this.ingredients}}'>{{this.ingredients}}</p>
       <br>
-      <p id="foodDescript" value="{{{this.description}}}">{{{this.description}}}</p>
+      <p id="foodDescript" value="{{{this.description}}}">{{this.description}}</p>
 
       <br>
       <button class="saveBtn bg-primary text-white" data-id="{{id}}">
@@ -53,7 +53,7 @@
               mealType: mealInput.attr('src').trim(),
             };
 
-            console.log(descrInput.text().toLowerCase());
+            console.log(descrInput.text().trim());
             // console.log(title, description, mealType, UserId)
 
 
