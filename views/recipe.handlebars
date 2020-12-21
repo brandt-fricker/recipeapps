@@ -1,38 +1,78 @@
 <main class="recipe">
-<div class="container-fluid">
-<nav class="navbar navbar-light bg-dark fixed-top">
   <div class="container-fluid">
-    <a class="btn btn-primary" href="/logout" role="button">Logout</a>
-    <a class="btn btn-primary" href="/main" role="button">Main Page</a>
-    <h5>Logged in as a <span class="member-name"></span></h5>
-  </div>
-</nav>
-<style>
-  body {
-  background-image: url(../images/recipePage.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-</style>
-<div class="row">
-<div class="col-sm-12 mt-3 d-inline-block">
-  <a href="/get-random" class="btn btn-primary mt-2" >Get Random Recipe</a>
-</div>
-</div>
-<marquee class="text-primary">Welcome To The App <span class="member-name"></span></span></marquee>
-<div class="recipe-container text-white">
-<br>
-  <h1>{{this.title}}</h1>
-<br>
- <img src="{{this.image}}" alt="">
-<br>
-  <p>{{{this.instructions}}}</p>
-<br>
-<button class="saveBtn bg-primary text-white" data-id="{{id}}">
-		Save Recipe
-	</button>
+    <nav class="navbar navbar-light bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="btn btn-primary" href="/logout" role="button">Logout</a>
+        <a class="btn btn-primary" href="/main" role="button">Main Page</a>
+        <h5>Logged in as a <span class="member-name"></span></h5>
+      </div>
+    </nav>
+    <style>
+      body {
+        background-image: url(../images/recipePage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    </style>
+    <div class="row">
+      <div class="col-sm-12 mt-3 d-inline-block">
+        <a href="/get-random" class="btn btn-primary mt-2">Get Random Recipe</a>
+      </div>
+    </div>
+    <marquee class="text-primary">Welcome To The App <span class="member-name"></span></span></marquee>
+    <div class="recipe-container text-white">
+      <br>
+      <h1 id="foodTitle" value="{{this.title}}">{{this.title}}</h1>
+      <br>
+      <img id="foodType" src="{{this.mealType}}" alt="">
+      <br>
+      <p id="ingredients" value='{{this.ingredients}}'>{{this.ingredients}}</p>
+      <br>
+      <p id="foodDescript" value="{{{this.description}}}">{{{this.description}}}</p>
 
-</div>
-</div>
+      <br>
+      <button class="saveBtn bg-primary text-white" data-id="{{id}}">
+        Save Recipe
+      </button>
+      <script>
+        $(document).ready(function () {
+          const titleInput = $("#foodTitle");
+          const descrInput = $("#foodDescript");
+          const mealInput = $("#foodType");
+          const saveRecipe = $(".saveBtn");
+          const ingrInput = $("#ingredients");
+
+          saveRecipe.on("click", function (e) {
+            e.preventDefault();
+
+            const { title, ingredients, description, mealType } = {
+              title: titleInput.text().trim(),
+              ingredients: ingrInput.text().trim(),
+              description: descrInput.text().replace(/<[^>]*>/g, "").toLowerCase(),
+              mealType: mealInput.attr('src').trim(),
+            };
+
+            console.log(descrInput.text().toLowerCase());
+            // console.log(title, description, mealType, UserId)
+
+
+            pushData(title, ingredients, description, mealType);
+
+            function pushData(title, ingredients, description, mealType) {
+              $.post("/api/save-recipes", {
+                title: title,
+                ingredients: ingredients,
+                description: description,
+                mealType: mealType,
+
+              }).then(function (data) {
+                console.log(data, "Success!");
+              });
+            }
+          });
+        })
+      </script>
+    </div>
+  </div>
 </main>

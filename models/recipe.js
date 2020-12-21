@@ -9,17 +9,16 @@ module.exports = function(sequelize, DataTypes) {
       },
       ingredients: {
         type: DataTypes.TEXT,
-        allowNull: false,
+        allowNull: true,
         len: [5]
       },
       description: {
         type: DataTypes.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
       mealType : {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        len: [5]
+        type: DataTypes.BLOB,
+        allowNull: true,
       }
 
     });
