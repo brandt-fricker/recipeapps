@@ -21,19 +21,26 @@ Most of us have at one point and time had a recipe for something that was scribb
   - [Meet the Creators](#meet-the-creators)
 
 ## Instructions
+[ADD GIF HERE](link for gif)
+
+The first time using Recipe App you will need to make a user name, input your email, and create a password. Once all have been created and inputted, you will be directed to your page that has just been created. From here you can get some ideas from a random recipe, look up your recipes, add a new recipe, or logout.  Now all the power is ready to be disposed at your leisure. Bon Appétit 
+
+
+
 
 ## Technological Outline
-* Axios
-* CSS
-* Express
-* Handlebars
-* JavaScript
-* Mysql
-* Passport
-* Sequleize
+* Axiosn -
+* CSS - styling for the app
+* Express - 
+* Handlebars - create our HTML
+* JavaScript - functionallity
+* Mysql - database for our users
+* Passport - 
+* Sequleize - 
   
 ## Deployment
 We deployed the app using Heroku and JawsDB
+
 View [here](https://zw16recipeapp.herokuapp.com/)
 
 ## Conclusion
