@@ -33,16 +33,17 @@ module.exports = function(app) {
     // res.sendFile(path.join(__dirname, "../public/members.html"));
     res.render("index");
   });
-// calls a random recipe to be displayed for the user
-  app.get("/get-random", async function (req, res) {
+
+  app.get("/get-random", isAuthenticated, async function (req, res) {
     let queryUrl =
       "https://api.spoonacular.com/recipes/random?number=1&apiKey=ba3cef0a320c41c5bbd79cbab4cf8d92";
     
       let hbsObject = {
       
         title: "",
-        instructions: '',
-        image: '',
+        ingredients: '',
+        description: '',
+        mealType: '',
      
         
       };
@@ -50,11 +51,12 @@ module.exports = function(app) {
     await axios.get(queryUrl).then(function (response) {
 
         hbsObject.title += response.data.recipes[0].title;
-        hbsObject.instructions += response.data.recipes[0].instructions + " , ";
-        hbsObject.image += response.data.recipes[0].image;
+        hbsObject.ingredients += response.data.recipes[0].extendedIngredients.map(({original}) => original);;
+        hbsObject.description += response.data.recipes[0].instructions + " , ";
+        hbsObject.mealType += response.data.recipes[0].image;
 
     console.log(response)
-
+console.log(hbsObject.ingredients)
     });
     console.log(hbsObject, "hello");
     res.render("recipe", hbsObject);

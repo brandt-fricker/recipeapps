@@ -4,6 +4,7 @@
 // Requiring our models
 var { User, Recipe } = require("../models");
 var app = require("./api-routes")
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 // Routes
 // =============================================================
@@ -46,6 +47,16 @@ module.exports = function (app) {
     const newRecipe = await Recipe.create({
       ...req.body,
       
+    });
+    res.json(newRecipe);
+    console.log(newRecipe.toJSON());
+  });
+  app.post("/api/save-recipes",isAuthenticated, async function (req, res) {
+
+    console.log(req.user)
+    const newRecipe = await Recipe.create({
+      ...req.body,
+      UserId: req.user.id,
     });
     res.json(newRecipe);
     console.log(newRecipe.toJSON());

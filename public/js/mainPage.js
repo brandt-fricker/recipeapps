@@ -6,6 +6,9 @@ $(document).ready(function () {
   const updateYourBtn = $(".updateYour");
   const deleteYourBtn = $(".deleteYour");
   const saveRecipe = $(".saveBtn");
+  const titleInput = $("#foodTitle");
+  const descrInput = $("#foodDecsript");
+  const mealInput = $("#foodType");
 
   // getRandomBtn.on("click", function(e) {
   //     e.preventDefault();
@@ -17,9 +20,9 @@ $(document).ready(function () {
   //     });
   // });
 
-  // on click, updates handlebars
   getAllBtn.on("click", function (e) {
     e.preventDefault();
+
     $.ajax("api/recipes", {
       type: "GET",
     }).then(function (data) {
@@ -41,14 +44,22 @@ $(document).ready(function () {
           .attr("id", "foodDecsript")
           .text(`Description: ${data[i].description}`);
 
+<<<<<<< HEAD
         let mealType = $("<p>")
           .attr("class", "foodDataType")
           .attr("id", "foodType")
           .text(`Meal Type: ${data[i].mealType}`);
+=======
+        let mealType = $("<img>")
+          .attr("class", "foodDataType")
+          .attr("id", "foodType")
+          .attr("src", data[i].mealType);
+>>>>>>> 90212a454dae8e653fbf52a6987b7789877c20dc
 
         $(".recipe-container").append(
           $("<div>")
             .attr("class", "recipeDiv")
+<<<<<<< HEAD
             .append(title, ingredients, description, mealType)
         );
       }
@@ -58,4 +69,53 @@ $(document).ready(function () {
   saveRecipe.on("click", function (e) {
     e.preventDefault();
   });
+=======
+            .append(mealType, title, ingredients, description)
+        );
+      }
+    });
+
+
+    
+  });
+
+//   saveRecipe.on("click", function (e) {
+//     e.preventDefault();
+//     $.get("/api/user_data").then(function (data) {
+//       userId = data.id;
+//       console.log(userId);
+//     });
+
+//     const { title, description, mealType, UserId } = {
+//       title: titleInput.val().trim(),
+//     //   ingredients: ingrInput.val().trim(),
+//       description: descrInput.val().trim(),
+//       mealType: mealInput.val().trim(),
+//       UserId: userId,
+//     };
+// // console.log(title, description, mealType, UserId)
+
+//     if (!title || !description || !mealType || !UserId) {
+//       return;
+//     }
+//     pushData(title, description, mealType, UserId);
+
+//     titleInput.val("");
+//     // ingrInput.val("");
+//     descrInput.val("");
+//     mealInput.val("");
+
+//     function pushData(title, description, mealType, UserId) {
+//       $.post("/api/save-recipes", {
+//         title: title,
+//         // ingredients: ingredients,
+//         description: description,
+//         mealType: mealType,
+//         UserId: userId,
+//       }).then(function (data) {
+//         console.log(data, "Success!");
+//       });
+//     }
+//   });
+>>>>>>> 90212a454dae8e653fbf52a6987b7789877c20dc
 });
