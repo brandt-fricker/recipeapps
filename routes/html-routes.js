@@ -33,7 +33,7 @@ module.exports = function(app) {
     // res.sendFile(path.join(__dirname, "../public/members.html"));
     res.render("index");
   });
-
+// calls a random recipe to be displayed for the user
   app.get("/get-random", async function (req, res) {
     let queryUrl =
       "https://api.spoonacular.com/recipes/random?number=1&apiKey=ba3cef0a320c41c5bbd79cbab4cf8d92";
