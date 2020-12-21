@@ -1,35 +1,31 @@
-# recipeapps
-## Introduction:
-Recipe app is an app that as a user you will be able to view, save, and create recipes according to input from the user.
+# Recipe App
 
-## User Story:
-As a user this app is for viewing, saving, and creating recipes.
+## Introduction
+The Recipe App is a great resource to help get new recipe ideas, share recipes, and add recipes that will satisfy not only your belly but get you out of the dark ages and have these recipes at the tip of your finger. No more searching through old cookbooks or rummaging around trying to find grandmas super secret recipe thats written on an index card. Only to find it with the ink faded and you having to guess if grandma was using 1/2 cup of apple slices or 1/2 a cup of apple spice. By all means go ahead and take that step and make the call, just add the recipe to the Recipe App so you don't have to wonder again next time.
 
-## Wireframe:
+## User Story
+Most of us have at one point and time had a recipe for something that was scribbled down on whatever was handy and within arms reach at that time. We wanted somewhere safe to input that recipe to avoid wasting time searching for it, decyphering it, and trying to replicate it for ourselves.
 
+## Table of Contents
+  - [Introduction](#introduction)
+  - [User Story](#user-story)
+  - [Table of Contents](#table-of-contents)
+  - [Technological Outline](#technological-outline)
+  - [Division of Labor](#division-of-labor)
+  - [Deployment](#deployment)
+  - [Future Development](#future-development)
+  - [Conclusion](#conclusion)
+  - [GitHub Repository](#github-repository)
 
-## Technologies Used:
-* express
-* mysql
-* handlebars
-* sequelize
-* css
-* javascript
+## Technological Outline
 
-## Division of Labor:
-1. Create Skeleton
-2. Rough outline
-3. Front End: (Brandt and Kendra)
-   * create html
-   * style html with css
-   * js button functionallity
-4. Back End: (Ricky and Sergey)
-   * create sql server
-   * create connection
-   * routes
-   * test with postman
-5. Join Front and Back End
-6. Deployment on Heroku
-7. Add to MVP
-8. Presentation
-9. README creation
+## Division of Labor
+
+## Deployment
+
+## Future Development
+
+## Conclusion
+
+## GitHub Repository
+
