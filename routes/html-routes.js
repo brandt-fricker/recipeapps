@@ -46,7 +46,7 @@ module.exports = function(app) {
      
         
       };
-
+// creating handlebars object
     await axios.get(queryUrl).then(function (response) {
 
         hbsObject.title += response.data.recipes[0].title;
@@ -59,12 +59,12 @@ module.exports = function(app) {
     console.log(hbsObject, "hello");
     res.render("recipe", hbsObject);
   });
-
+// navigates an authenticated user to index handlebars page
   app.get("/main", isAuthenticated, function(req, res) {
     // res.sendFile(path.join(__dirname, "../public/members.html"));
     res.render("index");
   });
-
+// navigates an authenticated user to addRecipe handlebars page
   app.get("/addRecipe", isAuthenticated, function(req, res) {
     // res.sendFile(path.join(__dirname, "../public/members.html"));
     res.render("addRecipe");
