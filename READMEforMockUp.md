@@ -22,7 +22,7 @@ As a user this app is for viewing, saving, and creating recipes.
 3. Front End: (Brandt and Kendra)
    * create html
    * style html with css
-   * js button functionallity
+   * js button functionality
 4. Back End: (Ricky and Sergey)
    * create sql server
    * create connection
