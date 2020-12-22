@@ -32,7 +32,7 @@ module.exports = function (app) {
 
   app.get("/get-random", isAuthenticated, async function (req, res) {
     let queryUrl =
-      "https://api.spoonacular.com/recipes/random?number=1&apiKey=ba3cef0a320c41c5bbd79cbab4cf8d92";
+      `https://api.spoonacular.com/recipes/random?number=1&apiKey=${process.env.APIKEY}`;
 
     let hbsObject = {
       title: "",
