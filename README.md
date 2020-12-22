@@ -12,6 +12,7 @@ Most of us have at one point and time had a recipe for something that was scribb
   - [User Story](#user-story)
   - [Instructions](#instructions)
   - [Technological Outline](#technological-outline)
+  - [Contributig](#contributing)
   - [Conclusion](#conclusion)
   - [License](#license)
   - [GitHub Repository](#github-repository)
@@ -33,6 +34,15 @@ The first time using Recipe App you will need to make a user name, input your em
 * Passport - authenticate users
 * Sequleize - manage database
   
+## Contributing
+When contributing to this repository, please first discuss the change you wish to make via email, or any other method with the owners of this repository before making a change.
+### Steps for contributing
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request.  
+
 ## Deployment
 We deployed the app using Heroku and JawsDB
 
