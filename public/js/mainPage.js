@@ -5,18 +5,17 @@ $(document).ready(function () {
 
   getAllBtn.on("click", function (e) {
     e.preventDefault();
+    $(".recipe-container").empty();
 
     $.ajax("api/recipes", {
       type: "GET",
     }).then(function (data) {
       for (let i = 0; i < data.length; i++) {
-
         let idOfElement = data[i].id;
         let title = $("<p>")
           .attr("class", "foodDataTitle")
           .attr("id", "foodTitle")
           .text(`Recipe name - ${data[i].title}`);
-        
 
         let ingredients = $("<p>")
           .attr("class", "foodDataIngred")
@@ -37,34 +36,31 @@ $(document).ready(function () {
           .attr("class", "deleteBtn")
           .text("Delete Recipe");
 
-          
-
         $(".recipe-container").append(
           $("<div>")
             .attr("class", "recipeDiv")
+            .attr("id", idOfElement)
             .append(mealType, title, ingredients, description, deleteBtn)
         );
-        deleteBtn.on("click", function (e) {
+        deleteBtn.on("click", function () {
           // Make sure to preventDefault on a submit event.
-        
+
           console.log("Oops", idOfElement);
-      
+
           const id = idOfElement;
-          
-      
+
           // Send the DELETE request.
           $.ajax({
             url: "/api/delete-recipe/" + id,
             method: "DELETE",
           }).then(function () {
             console.log("Deleted!");
-            // Reload the page to get the updated list
-            window.location.href = "/main";
+            
           });
+          $(this).closest(".recipeDiv").remove();
         });
         console.log(idOfElement);
       }
     });
-    });
-
+  });
 });
