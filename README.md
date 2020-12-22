@@ -12,7 +12,7 @@ Most of us have at one point and time had a recipe for something that was scribb
   - [User Story](#user-story)
   - [Instructions](#instructions)
   - [Technological Outline](#technological-outline)
-  - [Contributig](#contributing)
+  - [Contributing](#contributing)
   - [Conclusion](#conclusion)
   - [License](#license)
   - [GitHub Repository](#github-repository)
