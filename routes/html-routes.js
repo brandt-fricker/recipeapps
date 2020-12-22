@@ -14,7 +14,7 @@ module.exports = function (app) {
 
     res.render("signup");
   });
-
+//Path to the log in HTML page when logged in 
   app.get("/login", function (req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
@@ -29,7 +29,7 @@ module.exports = function (app) {
   app.get("/members", isAuthenticated, function (req, res) {
     res.render("index");
   });
-
+//GET route for the api used on the random generator button when logged in 
   app.get("/get-random", isAuthenticated, async function (req, res) {
     let queryUrl =
       "https://api.spoonacular.com/recipes/random?number=1&apiKey=ba3cef0a320c41c5bbd79cbab4cf8d92";
@@ -40,7 +40,7 @@ module.exports = function (app) {
       description: "",
       mealType: "",
     };
-
+//axios call to access information from api
     await axios.get(queryUrl).then(function (response) {
       hbsObject.title += response.data.recipes[0].title;
       hbsObject.ingredients += response.data.recipes[0].extendedIngredients.map(
@@ -55,11 +55,11 @@ module.exports = function (app) {
     console.log(hbsObject, "hello");
     res.render("recipe", hbsObject);
   });
-
+//Path to the main HTML page when logged in 
   app.get("/main", isAuthenticated, function (req, res) {
     res.render("index");
   });
-
+//Path to the add recipe HTML handlebars page when logged in 
   app.get("/addRecipe", isAuthenticated, function (req, res) {
     res.render("addRecipe");
   });
