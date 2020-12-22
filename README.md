@@ -18,12 +18,13 @@ Most of us have at one point and time had a recipe for something that was scribb
   - [Meet the Creators](#meet-the-creators)
 
 ## Instructions
-[ADD GIF HERE](link for gif)
+![Sneek Peak](./public/images/appPreview.gif)
 
 The first time using Recipe App you will need to make a user name, input your email, and create a password. Once all have been created and inputted, you will be directed to your page that has just been created. From here you can get some ideas from a random recipe, look up your recipes, add a new recipe, or logout.  Now all the power is ready to be disposed at your leisure. Bon Appétit!
 
 ## Technological Outline
 * Axios - help with API calls
+* Bcryptjs - encrypt user passwords
 * CSS - styling for the app
 * Express - for framework
 * Handlebars - create our HTML
