@@ -19,7 +19,7 @@ As a user this app is for viewing, saving, and creating recipes.
 ## Division of Labor:
 1. Create Skeleton
 2. Rough outline
-3. Front End: (Brandt and Kendra)
+3. Front End: (Brandt)
    * create html
    * style html with css
    * js button functionality
