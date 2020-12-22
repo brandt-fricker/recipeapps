@@ -49,6 +49,7 @@ module.exports = function (app) {
     res.json(newRecipe);
     console.log(newRecipe.toJSON());
   });
+   // POST route for saving a new recipe
   app.post("/api/save-recipes", isAuthenticated, async function (req, res) {
     console.log(req.user);
     const newRecipe = await Recipe.create({
@@ -58,7 +59,7 @@ module.exports = function (app) {
     res.json(newRecipe);
     console.log(newRecipe.toJSON());
   });
-
+  // POST route for deleting a recipe
   app.delete("/api/delete-recipe/:id", async function (req, res) {
     const deleteRecipe = await Recipe.destroy({
       where: {

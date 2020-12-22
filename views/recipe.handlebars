@@ -37,30 +37,33 @@
       </button>
       <script>
         $(document).ready(function () {
+          // creating variables for id to be used in js
           const titleInput = $("#foodTitle");
           const descrInput = $("#foodDescript");
           const mealInput = $("#foodType");
           const saveRecipe = $(".saveBtn");
           const ingrInput = $("#ingredients");
-
+          //save button functionality
           saveRecipe.on("click", function (e) {
             e.preventDefault();
-
+            //taking the information from the handlebars objects displayed on the HTML page
             const { title, ingredients, description, mealType } = {
               title: titleInput.text().trim(),
               ingredients: ingrInput.text().trim(),
               description: descrInput.text().replace(/<[^>]*>/g, "").toLowerCase(),
               mealType: mealInput.attr('src').trim(),
             };
+            //calling function to push variables equal to the data from the handlebars object on HTML page
             pushData(title, ingredients, description, mealType);
 
+            //push data function posts the information from the handlebars object on the HTML page to the address /api/save-recipes as a json object
             function pushData(title, ingredients, description, mealType) {
               $.post("/api/save-recipes", {
                 title: title,
                 ingredients: ingredients,
                 description: description,
                 mealType: mealType,
-
+                //if succesfull log "success!"
               }).then(function (data) {
                 console.log(data, "Success!");
                 window.location.href = "/main"

@@ -2,16 +2,18 @@ $(document).ready(function () {
   const getRandomBtn = $("#getRandom");
   const getAllBtn = $(".getAll");
   const deleteBtn = $(".deleteBtn");
-
+//get all button functionality on main page
   getAllBtn.on("click", function (e) {
     e.preventDefault();
     $(".recipe-container").empty();
-
+//ajax call to get to teh recipes api on the back end api routes
     $.ajax("api/recipes", {
       type: "GET",
     }).then(function (data) {
+        //a for loop to dislay the data from the recipe on the click
       for (let i = 0; i < data.length; i++) {
         let idOfElement = data[i].id;
+ 
         let title = $("<p>")
           .attr("class", "foodDataTitle")
           .attr("id", "foodTitle")
