@@ -32,7 +32,7 @@
       <p id="foodDescript" value="{{{this.description}}}">{{this.description}}</p>
 
       <br>
-      <button class="saveBtn bg-primary text-white" data-id="{{id}}">
+      <button class="saveBtn text-white" data-id="{{id}}">
         Save Recipe
       </button>
       <script>
@@ -52,11 +52,6 @@
               description: descrInput.text().replace(/<[^>]*>/g, "").toLowerCase(),
               mealType: mealInput.attr('src').trim(),
             };
-
-            console.log(descrInput.text().trim());
-            // console.log(title, description, mealType, UserId)
-
-
             pushData(title, ingredients, description, mealType);
 
             function pushData(title, ingredients, description, mealType) {
@@ -68,6 +63,7 @@
 
               }).then(function (data) {
                 console.log(data, "Success!");
+                window.location.href = "/main"
               });
             }
           });
