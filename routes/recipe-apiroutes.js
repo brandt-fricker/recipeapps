@@ -1,16 +1,15 @@
 // Dependencies
 // =============================================================
-// const axios = require("axios");
+
 // Requiring our models
-var { User, Recipe } = require("../models");
-var app = require("./api-routes")
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+const { User, Recipe } = require("../models");
+const app = require("./api-routes");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 // Routes
 // =============================================================
 module.exports = function (app) {
   // GET route for getting all of the posts
- 
 
   app.get("/api/recipes", async function (req, res) {
     const query = {};
@@ -35,25 +34,23 @@ module.exports = function (app) {
       },
       include: [User],
     });
-    // console.log(singleRecipe);
+
     res.json(singleRecipe);
     console.log(singleRecipe.toJSON());
   });
 
   // POST route for saving a new post
-  app.post("/api/add-recipes", async function (req, res) {
-
-    console.log(req.body)
+  app.post("/api/add-recipes", isAuthenticated, async function (req, res) {
+    console.log(req.body);
     const newRecipe = await Recipe.create({
       ...req.body,
-      
+      UserId: req.user.id,
     });
     res.json(newRecipe);
     console.log(newRecipe.toJSON());
   });
-  app.post("/api/save-recipes",isAuthenticated, async function (req, res) {
-
-    console.log(req.user)
+  app.post("/api/save-recipes", isAuthenticated, async function (req, res) {
+    console.log(req.user);
     const newRecipe = await Recipe.create({
       ...req.body,
       UserId: req.user.id,
@@ -69,15 +66,6 @@ module.exports = function (app) {
       },
     });
     res.json(deleteRecipe);
-  });
-
-  // PUT route for updating posts
-  app.put("/api/update-recipe/:id", async function (req, res) {
-    const updateRecipe = await Recipe.update(req.body, {
-      where: {
-        id: req.params.id,
-      },
-    });
-    res.json(updateRecipe);
+    console.log("Deleted)");
   });
 };

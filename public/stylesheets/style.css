@@ -6,8 +6,6 @@
   left: 27%;
   margin-top: -50px;
   margin-left: -50px;
-  /* width: 100px;
-  height: 100px; */
 }
 
 p {
@@ -30,8 +28,8 @@ p {
   background-color: wheat;
   font-size: 1.2rem;
   border-radius: 8px;
-  margin-bottom: 10px;
-  opacity: 0.7;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
   padding-left: 5px;
 }
 
@@ -46,6 +44,8 @@ marquee {
 button {
   border-radius: 4px;
   margin-left: 5px;
+  background-color: blue;
+  color: white;
 }
 label{
   color: red;
@@ -55,4 +55,7 @@ label{
 
 h5{
   color: white;
+}
+.deleteBtn, .saveBtn{
+  margin-bottom: 8px;
 }
