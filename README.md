@@ -1,4 +1,5 @@
 # Recipe App
+Try it out [here](https://zw16recipeapp.herokuapp.com/)
 
 ## Introduction
 The Recipe App is a great resource to help get new recipe ideas, share recipes, and add recipes that will satisfy not only your belly but get you out of the dark ages and have these recipes at the tip of your finger. No more searching through old cookbooks or rummaging around trying to find grandmas super secret recipe thats written on an index card. Only to find it with the ink faded and you having to guess if grandma was using 1/2 cup of apple slices or 1/2 a cup of apple spice. By all means go ahead and take that step and make the call, just add the recipe to the Recipe App so you don't have to wonder again next time.
@@ -9,31 +10,38 @@ Most of us have at one point and time had a recipe for something that was scribb
 ## Table of Contents
   - [Introduction](#introduction)
   - [User Story](#user-story)
-  - [Table of Contents](#table-of-contents)
+  - [Instructions](#instructions)
   - [Technological Outline](#technological-outline)
-  - [Division of Labor](#division-of-labor)
-  - [Deployment](#deployment)
-  - [Future Development](#future-development)
   - [Conclusion](#conclusion)
+  - [License](#license)
   - [GitHub Repository](#github-repository)
   - [Meet the Creators](#meet-the-creators)
 
+## Instructions
+[ADD GIF HERE](link for gif)
+
+The first time using Recipe App you will need to make a user name, input your email, and create a password. Once all have been created and inputted, you will be directed to your page that has just been created. From here you can get some ideas from a random recipe, look up your recipes, add a new recipe, or logout.  Now all the power is ready to be disposed at your leisure. Bon Appétit!
+
 ## Technological Outline
-* CSS
-* Express
-* Handlebars
-* JavaScript
-* Mysql
-* Sequleize
+* Axios - help with API calls
+* CSS - styling for the app
+* Express - for framework
+* Handlebars - create our HTML
+* JavaScript - functionallity
+* Mysql - database for our users
+* Passport - authenticate users
+* Sequleize - manage database
   
-## Division of Labor
-
 ## Deployment
+We deployed the app using Heroku and JawsDB
 
-## Future Development
+View [here](https://zw16recipeapp.herokuapp.com/)
 
 ## Conclusion
 The Recipe App will save you time searching for recipes, and allow you to share and save recipes with ease. Family favorite recipes should be able to withstand the elements, enter them into the Recipe App and make sure they do.
+
+## License
+![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## GitHub Repository
 - [Project Repository](https://github.com/rjustin16/recipeapps)
@@ -42,4 +50,4 @@ The Recipe App will save you time searching for recipes, and allow you to share 
 - [Sergey](https://github.com/slugovoy)
 - [Ricky](https://github.com/rjustin16)
 - [Brandt](https://github.com/brandt-fricker)
-- [Kendra](https://github.com/klharmany)
+
